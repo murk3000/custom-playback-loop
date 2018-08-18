@@ -19,7 +19,7 @@ While I use the words "hack" in my code, this is by no means a hack. Just a simp
 1. Open developer tools on chrome
 2. Use `Select an element on this page to inspect it` on the top-left side of the dev tools
 3. Hover over the video till the whole video is highlighted, and click on it. You'll be shown the corresponding webpage code.
-4. If the corresponding code is in this format <video ...someText...>...moreText...</video> this code will work :), otherwise you're out of luck :(
+4. If the corresponding code is in this format `<video ...someText...>...moreText...</video>` this code will work :), otherwise you're out of luck :(
 5. Right click and select `add attribute`
 6. Type the following `id="myCustomName"` (**don't use spaces in your name**)
 7. Replace every instance of `document.getElementsByClassName("someClassName")` with `document.getElementByID("myCustomName")`
