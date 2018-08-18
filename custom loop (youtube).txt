@@ -8,7 +8,7 @@ let hackRSec = 9;	//Set reset sec
 handleCustomLoop = () => {
 	let hackTime = document.getElementsByClassName("video-stream html5-main-video")[0].currentTime;
 	if (hackTime > hackHr*3600 + hackMin*60 + hackSec) {
-		document.getElementsByClassName("video-stream html5-main-video")[0].currentTime = hackRHr*3600+hackRMin*60+hackSec;
+		document.getElementsByClassName("video-stream html5-main-video")[0].currentTime = hackRHr*3600+hackRMin*60+hackRSec;
 	}
 }
 document.getElementsByClassName("video-stream html5-main-video")[0].addEventListener("timeupdate", handleCustomLoop);
