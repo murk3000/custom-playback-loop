@@ -1,14 +1,14 @@
-let hackHr =0;		//Set hours
-let hackMin = 5; 	//Set minutes
-let hackSec = 18;	//Set seconds
-let hackRHr = 0;	//Set reset hour
-let hackRMin = 0;	//Set reset min
-let hackRSec = 9;	//Set reset sec
+let stopHour = 0;	//Set hour where you want to trigger a reset
+let stopMinute= 5; 	//Set minutes "				    "
+let stopSecond = 18;	//Set seconds "				    "
+let resetHour = 0;	//Set reset hour where you want your loop to begin playing from 
+let resetMinute = 0;	//Set reset min	"					       "
+let resetSecond = 9;	//Set reset sec	"					       "
 
 handleCustomLoop = () => {
 	let hackTime = document.getElementsByClassName("video-stream html5-main-video")[0].currentTime;
-	if (hackTime > hackHr*3600 + hackMin*60 + hackSec) {
-		document.getElementsByClassName("video-stream html5-main-video")[0].currentTime = hackRHr*3600+hackRMin*60+hackRSec;
+	if (hackTime > stopHour*3600 + stopMInute*60 + stopSecond) {
+		document.getElementsByClassName("video-stream html5-main-video")[0].currentTime = resetHour*3600 + resetMnute*60 + resetSecond;
 	}
 }
 document.getElementsByClassName("video-stream html5-main-video")[0].addEventListener("timeupdate", handleCustomLoop);
