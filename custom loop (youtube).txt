@@ -6,8 +6,8 @@ let resetMinute = 0;	//Set reset min	"					       "
 let resetSecond = 9;	//Set reset sec	"					       "
 
 handleCustomLoop = () => {
-	let hackTime = document.getElementsByClassName("video-stream html5-main-video")[0].currentTime;
-	if (hackTime > stopHour*3600 + stopMInute*60 + stopSecond) {
+	let curTime = document.getElementsByClassName("video-stream html5-main-video")[0].currentTime;
+	if (curTime > stopHour*3600 + stopMInute*60 + stopSecond) {
 		document.getElementsByClassName("video-stream html5-main-video")[0].currentTime = resetHour*3600 + resetMnute*60 + resetSecond;
 	}
 }
